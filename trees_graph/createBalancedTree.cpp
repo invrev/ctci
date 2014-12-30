@@ -12,13 +12,22 @@ struct BTNode  {
     };
 };
 
-void createBalancedTree (int input[],int n,BTNode *root) {
-    int start = 0;
-    if (start < n) {
-        mid = (start + n) / 2;
+BTNode* createBalancedTree (int input[],int start,int end,BTNode *root) {
+    if (start < end) {
+        int mid = (start + end) / 2;
         root = new BTNode (input[mid]);
-        createBalancedTree (input,mid-1,root->left);
-        createBalancedTree (input,mid+1,root->right);
+        root->left = createBalancedTree (input,start,mid-1,root);
+        root->right = createBalancedTree (input,mid+1,end,root);
+        return root;
+    }
+}
+
+void createBalancedTree (int input[],int start,int end,BTNode *root) {
+    if (start < end) {
+        mid = (start + end) / 2;
+        root = new BTNode (input[mid]);
+        createBalancedTree (input,start,mid-1,root->left);
+        createBalancedTree (input,mid+1,end,root->right);
     }
 }
 

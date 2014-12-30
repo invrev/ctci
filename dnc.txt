@@ -1,0 +1,7 @@
+
+Binary search
+Application :
+find key in sorted array
+find closet points from the pair
+
+
