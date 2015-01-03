@@ -95,10 +95,11 @@ int main () {
 
     BTNode *target = root->left->right->right;
     BTNode *target1 = root->left->left->left;
+    BTNode* target2 = root->right;
     bool indicator = false;
 
     //BTNode *t1 = inOrderSuccessor (root,target1,NULL);
-    BTNode *t1 = inOrderSuccessor (root,target,NULL);
+    BTNode *t1 = inOrderSuccessor (root,target2,NULL);
 
     cout << t1->data << endl;
 
