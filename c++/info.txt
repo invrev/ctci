@@ -1,0 +1,82 @@
+
+C++ has an abstraction called iostreams to perform
+
+(1) input operations on media (e.g., keyboard, a file, network sockets) 
+from which our program can extract characters from sequentially, or
+(2) output operations on media (e.g., the terminal, a file, network socket) 
+to which our program can print characters to sequentially.
+
+system defined stream object : cout
+
+stream manipulator : endl
+1.inserts  "\n" charcter to the end of stream
+2.Also flushes the stream so that output is not buffered.
+As in some OS buffers the o/p to optimize the I/O efficiency.
+
+3.using namespace increases the posiblity of name-clashing.
+
+c++ predefined types
+http://en.cppreference.com/w/cpp/language/types
+
+c++ is statically typed language unlike Python 
+
+
+ Creating “stub” functions is a good programming habit.
+
+Declaration v/s definition
+
+There can be multiple declaration of an identifier but at most one definition per name.
+
+// definition of function foo()
+int foo(int x) {
+    return x*x; 
+}
+ 
+// definition of struct Date
+struct Date {
+    int d;
+    int m;
+    int y;
+};
+
+
+Reference :
+A reference is an alias for an existing object. 
+We define a reference to an object of 
+type T by T& ref = t where t is an existing object/variable of type T
+
+When you use pass-by-value, the compiler copies the value of an argument in a calling function 
+to a corresponding non-pointer or non-reference parameter in the called function definition. 
+The parameter in the called function is initialized with the value of the passed argument. 
+As long as the parameter has not been declared as constant, 
+the value of the parameter can be changed, 
+but the changes are only performed within the scope of the called function only; 
+they have no effect on the value of the argument in the calling function.
+
+
+Another situation when we might want to pass by reference is 
+when the object(s) passed as argument to a function is really large. 
+In such a case, pass-by-value wastes both time (for copying the value into the function’s argument) 
+and space (for storing the copy). 
+
+
+use of enum in c++ 
+Named constant
+
+Pointers :
+holds the memory address
+
+c style string
+Most expensive one byte mistake
+http://queue.acm.org/detail.cfm?id=2010365
+
+32 bit : pointer points 
+
+
+A copy constructor is for creating a new object from an old object (of the same type). The copy constructor is called in the following three situations:
+
+We declare a variable and initialize it using another object: UBVector vec1(vec2);
+An object is passed by value into a function
+An object is returned by value from a function
+
+

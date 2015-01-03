@@ -20,6 +20,7 @@ struct TreeNode {
 //    4      9    12    21
 // 3
 
+//LRD 
 void postOrderTraversalI (TreeNode *root) {
         stack<TreeNode *> visitS;
         TreeNode *curr = root;
@@ -39,8 +40,10 @@ void postOrderTraversalI (TreeNode *root) {
                 curr = NULL;
             }
         }
-
 }
+
+
+
 
 
 

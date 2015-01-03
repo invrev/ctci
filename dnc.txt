@@ -1,5 +1,7 @@
-
-Binary search
+1.Binary search
+2.FFT
+3.Multiplication
+4.closest pair of point
 Application :
 find key in sorted array
 find closet points from the pair

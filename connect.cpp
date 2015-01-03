@@ -48,9 +48,6 @@ TreeNode *bottomLCA (TreeNode *root,TreeNode *l,TreeNode* r) {
     }
 }
 
-TreeNode* topDown () {
-    //use the queue
-}
 
 
 TreeNode* connectTree (TreeNode *root,TreeNode *headRef) {
