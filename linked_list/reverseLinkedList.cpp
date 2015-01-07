@@ -25,7 +25,8 @@ ListNode* reverseLinkedList(ListNode *head) {
     }
     ListNode *prev = NULL;
     ListNode *curr = head;
-    ListNode *next_p = head->next;
+    //ListNode *next_p = head->next;
+    ListNode *next_p = NULL;
     while (curr) {
         next_p = curr->next;
         curr->next = prev;

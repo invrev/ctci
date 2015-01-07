@@ -14,16 +14,19 @@ void generatePermutation (vector<int>&ip,int k,vector<int>& visited,vector<int>&
 
     if (k == ip.size() ) {
         //print_result(result);
+        cout << "-------------" << endl;
         print_result (visited);
         op.push_back(result);
         return;
     } else {
        for (int i=0;i<ip.size();i++) {
+           //cout << "(" << i << "," << k << ")" << endl;
+           cout << "(" << k <<"---" ;
+           print_result (visited);
            if (visited[i] == 0) {
-               cout << k << "|";
+               //cout << k << "|";
                //print_result (visited);
                visited[i] = 1;
-               //cout << "(" << i << "," << k << ")" << endl;
                //vector unware of which is pushed
                result.push_back(ip[i]);
                generatePermutation (ip,k+1,visited,result,op);
@@ -41,7 +44,8 @@ int main () {
 
     vector<int> result;
     vector<vector <int> > op;
-    int a[] = {1,2,3};
+    //int a[] = {1,2,3};
+    int a[] = {1,2};
     vector<int> ip(a,a+sizeof(a)/sizeof(a[0]));
     int n = ip.size();
     vector<int> visited (n,0);
