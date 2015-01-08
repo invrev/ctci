@@ -8,11 +8,10 @@ struct HashTable {
     string key;
     string value;
     HashTable *next;
-    HashTable (string aKey,string aValue) : 
-        key(aKey),value(aValue),next(NULL)
-    {
-
-    };
+    //HashTable (string aKey,string aValue) : 
+    //    key(aKey),value(aValue),next(NULL)
+    //{
+    //};
 };
 
 
