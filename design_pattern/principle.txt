@@ -1,0 +1,5 @@
+The open-closed principle
+The Liscov substitution principle
+The dependency inversion principle
+
+
