@@ -12,6 +12,28 @@ struct BTNode  {
     };
 };
 
+// {1,2,3,4,5,6,7,8}
+
+
+//1.find mid ,
+//2.create root node
+//3.root->left = (start,mid-1)
+//4.root->right =  (mid+1,end)
+
+//         4 
+// {1,2,3}   {5,6,7,8}
+
+//         4 
+//     2      {5,6,7,8}
+// {1}   {3}  
+
+
+//         4 
+//     2         6
+// {1}   {3} {5}   {7,8}
+
+//
+
 BTNode* createBalancedTree (int input[],int start,int end,BTNode *root) {
     if (start < end) {
         int mid = (start + end) / 2;

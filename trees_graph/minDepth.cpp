@@ -15,6 +15,13 @@ struct TreeNode {
 //Do the preorder traversal ()
 //NOTE : min dept
 
+//1.//          12
+
+//2.//            12
+//  //       8         40
+//  //   4          31 
+//  //2       
+
 int minDepth () {
   if (root == NULL) {
       return 0;

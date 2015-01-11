@@ -26,6 +26,23 @@ TreeNode* bottomUptravesal (TreeNode *root,TreeNode *parent) {
     }
 }
 
+//            12
+//       8            40
+//   4       10   30       60
+//2       9          31 
+
+//LCA(2,9) = 4
+//LCA(8,40) = 12
+
+
+//In case of BST : 
+//we can find LCA by comparing the values
+//as for LCA the condition is root->left < root > root->right
+//then root is LCA
+
+//In case of generic binary tree (do preorder traversal)
+//
+
 //Bottomup approach
 TreeNode *bottomLCA (TreeNode *root,TreeNode *l,TreeNode* r) {
     if (!root) {
