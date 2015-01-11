@@ -5,9 +5,6 @@ using namespace std;
 //1.shape (balanced array with left and right child at same level while parent is at 1 level up) 
 //2.property  (parent is always larger than its children)
 
-
-//
-
 void printHeap(int A[],int n) {
     for (int i=0;i<n;i++) {
         cout << A[i] << " ";
@@ -45,29 +42,58 @@ void maxHeapify(int A[],int i,int n) {
 }
 
 
-int insertToHeap () {
-    
-}
-
-int deleteFromHeap () {
-
-}
-
 void buildMaxHeap (int A[],int n) {
     printHeap(A,n);
     //start from second last nodes
     for (int i= (n/2);i>=1 ;i--) {
         maxHeapify(A,i,n);
+        //printHeap(A,n);
+    }
+    //printHeap(A,n);
+}
+
+
+void minHeapify(int A[],int i,int n) {
+    int leftChild = getLeftChild(i);
+    int rightChild = getRightChild(i);
+    int smallest = i;
+    if (leftChild <= n && A[leftChild] <  A[i]) {
+        smallest = leftChild;
+    } 
+    if (rightChild <= n && A[rightChild] < A[smallest]) {
+        smallest = rightChild ;
+    } 
+    if (smallest != i) {
+        swap (A[i],A[smallest]);
+        minHeapify (A,smallest,n);
+    }
+}
+
+
+void buildMinHeap (int A[],int n) {
+    printHeap(A,n);
+    //start from second last nodes
+    for (int i= (n/2);i>=1 ;i--) {
+        minHeapify(A,i,n);
         printHeap(A,n);
     }
     printHeap(A,n);
 }
 
-
+void heapSort(int a[],int n) {
+    buildMaxHeap (a,n-1);
+    for (int i=n-1;i>=0;i--) {
+        swap(a[i],a[0]);
+        maxHeapify(a,0,i-1);
+    }
+}
 
 int main () {
     int A[] = {-1,4,3,2,16,9,10,14,8,7};
     int n = sizeof(A)/sizeof(A[0]);
-    buildMaxHeap (A,n-1);
+    //buildMinHeap (A,n-1);
+    //buildMaxHeap (A,n-1);
+    heapSort (A,n);
+    printHeap(A,n);
 
 }
