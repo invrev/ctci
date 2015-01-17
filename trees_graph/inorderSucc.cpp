@@ -64,20 +64,28 @@ BTNode* inOrderSuccessor(BTNode *root, BTNode* target,BTNode *parent) {
         if (root->right) {
             return (findLeftMostNode (root->right) );
         } else {
+
             return parent;
         }
     } else {
     
         //return ( inOrderSuccessor (root->left,target,root) ) ; core dump
         BTNode *left = inOrderSuccessor (root->left,target,root);
+        cout << "left = " << left << ",root" << root << endl;
         if (left) {
+            cout << "[left = " << left << ",root" << root << endl;
             return left;
         }
-       return (inOrderSuccessor (root->right,target,parent)  );
+        cout << "parent= " << parent << endl;
+        return (inOrderSuccessor (root->right,target,parent)  );
     }
     
 }
 
+//            17
+//       2            30 
+//   1       3      25   35
+//13       20  9       
 
 int main () {
 
@@ -96,10 +104,11 @@ int main () {
     BTNode *target = root->left->right->right;
     BTNode *target1 = root->left->left->left;
     BTNode* target2 = root->right;
+    BTNode* target3 = root->left->right->right;
     bool indicator = false;
 
     //BTNode *t1 = inOrderSuccessor (root,target1,NULL);
-    BTNode *t1 = inOrderSuccessor (root,target2,NULL);
+    BTNode *t1 = inOrderSuccessor (root,target3,NULL);
 
     cout << t1->data << endl;
 
