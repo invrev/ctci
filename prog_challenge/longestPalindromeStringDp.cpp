@@ -5,6 +5,7 @@ using namespace std;
 //
 //1,6 => 1,1 | 1,2 | 2,2 | 1,3 | 2,3 and so on
 //palidrome find start and maxLen and return
+//NOTE : Zig Zag traversal
 string findLongestPalidrome (string s) {
 
     int m = s.length();
