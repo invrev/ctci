@@ -18,7 +18,13 @@ void quickSort (int a[],int start,int end) {
     if (start >= end) {
         return ;
     } 
+   
+    //Get random pivot and create randomized quick sort 
+    //int m = rand() % (right-left+1);
+    //swap(vec[start], vec[start+m]);
+    
     int pivotV = a[start];
+
     int left = start;
     int right = end+1;
     while (true) {
