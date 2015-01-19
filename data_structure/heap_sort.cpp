@@ -82,9 +82,9 @@ void buildMinHeap (int A[],int n) {
 
 void heapSort(int a[],int n) {
     buildMaxHeap (a,n-1);
-    for (int i=n-1;i>=0;i--) {
-        swap(a[i],a[0]);
-        maxHeapify(a,0,i-1);
+    for (int i=n-1;i>=1;i--) {
+        swap(a[i],a[1]);
+        maxHeapify(a,1,i-1);
     }
 }
 

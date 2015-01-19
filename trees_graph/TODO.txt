@@ -1,0 +1,5 @@
+
+1.Given tree get level of the node 
+2.Find LCA of the tree given 2 nodes
+3.Find height of tree
+4.Find the inorder successor of given node
