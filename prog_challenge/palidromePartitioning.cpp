@@ -24,7 +24,7 @@ void enumPalindromeParition (string &input,int k,vector<string>& result
     for (int i=k;i<m;i++) {
         if ( isPalindrome(input,k,i) ) {
             result.push_back(input.substr(k,i-k+1));
-            enumPalindromeParition(input,i+1,result,op);
+            enumPalindromeParition(input,i+1,result,op);// verify k+1 or i+1 (end+1 for next palindrome)
             result.pop_back();     
         }
     }
