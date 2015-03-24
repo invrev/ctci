@@ -62,7 +62,7 @@ void doDFSTraverse (unordered_map<int,vector<int> >& graph,int v
 
 
 void doBFSTraverse (unordered_map<int,vector<int> >& graph,int v
-                ,unordered_set<bool> &visited,vector<int>& result)  {
+                ,unordered_set<int> &visited,vector<int>& result)  {
         queue<int> traverseQ;
         traverseQ.push(v);
         while (!traverseQ.empty()) {
@@ -79,13 +79,14 @@ void doBFSTraverse (unordered_map<int,vector<int> >& graph,int v
 
 
 void topologicalSort(unordered_map<int,vector<int> >& graph) {
-        unordered_set<bool> visited;
+        unordered_set<int> visited;
         vector<int> result;
         for (auto &it : graph) {
              int v = it.first;
              if (visited.find(v) == visited.end()) { 
                  visited.insert(v); 
-                 doBFSTraverse (graph,v,visited,result);
+                 //doBFSTraverse (graph,v,visited,result);
+                 doDFSTraverse(graph,v,visited,result);
              }                               
         }     
 }
